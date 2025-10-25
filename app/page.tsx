@@ -1,8 +1,11 @@
-import { MDXContent } from "mdx/types";
-import { MyComponent } from "./mdx-components";
-
-const components = { MyComponent };
+import { MyComponent } from "../mdx-components";
+import Welcome from "@/markdown/welcome.mdx";
 
 export default function Page() {
-  return <MDXContent components={components} />;
+  return (
+    <>
+      <MyComponent>Some text here!</MyComponent>
+      <Welcome></Welcome>
+    </>
+  );
 }
