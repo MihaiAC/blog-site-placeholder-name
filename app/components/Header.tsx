@@ -1,16 +1,21 @@
 import Link from "next/link";
 
-export default function Header() {
+interface HeaderProps {
+  className: string;
+}
+
+export default function Header({ className }: HeaderProps) {
   return (
-    <header>
-      <nav>
+    <header className={className}>
+      <nav className="flex justify-between">
         <div>
           <Link href="/">
-            {/* TODO: brand here or full name? */}
-            <span>VoidUnderflow</span>
+            {/* TODO: brand here or full name? Or make a revolving thing on hover. */}
+            <p>Void Underflow | </p>
+            <p>Mihai-Alexandru Ciobanu</p>
           </Link>
         </div>
-        <ul>
+        <ul className="flex gap-8">
           <li>
             <Link href="/">Home</Link>
           </li>
