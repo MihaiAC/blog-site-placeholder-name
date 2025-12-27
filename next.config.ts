@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
   options: {
-    rehypePlugins: ["rehype-highlight"],
+    rehypePlugins: ["rehype-highlight", "rehype-mdx-import-media"],
   },
 });
 

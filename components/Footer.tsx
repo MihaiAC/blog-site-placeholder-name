@@ -14,7 +14,7 @@ export default function Footer({ className }: FooterProps) {
         <ul className="flex gap-8">
           <li>
             <a
-              href="https://github.com/MihaiAC"
+              href="https://github.com/VoidUnderflow"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -23,7 +23,7 @@ export default function Footer({ className }: FooterProps) {
           </li>
           <li>
             <a
-              href="https://leetcode.com/u/MihaiAC/"
+              href="https://leetcode.com/u/VoidUnderflow/"
               target="_blank"
               rel="noopener noreferrer"
             >

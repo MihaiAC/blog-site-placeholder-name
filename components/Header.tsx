@@ -10,20 +10,21 @@ export default function Header({ className }: HeaderProps) {
       <nav className="flex justify-between">
         <div>
           <Link href="/">
-            {/* TODO: brand here or full name? Or make a revolving thing on hover. */}
-            <p>Void Underflow | </p>
-            <p>Mihai-Alexandru Ciobanu</p>
+            <p>Void Underflow</p>
           </Link>
         </div>
-        <ul className="flex gap-8">
+        <ul>
           <li>
             <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/posts">Posts</Link>
           </li>
           <li>
             <Link href="/projects">Projects</Link>
           </li>
           <li>
-            <Link href="/resume">Resume</Link>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </nav>

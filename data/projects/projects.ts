@@ -1,10 +1,13 @@
+import { StaticImageData } from "next/image";
+import placeholderImage from "./placeholder.jpg";
+
 export interface Project {
   id: string;
   title: string;
   description: string;
   githubUrl: string;
   tags: string[];
-  imageUrl: string;
+  image: StaticImageData;
 }
 
 const projects: Project[] = [
@@ -15,7 +18,7 @@ const projects: Project[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     githubUrl: "https://example.com",
     tags: ["Python", "TensorFlow", "React", "D3.js"],
-    imageUrl: "placeholder.jpg",
+    image: placeholderImage,
   },
   {
     id: "task-queue",
@@ -24,7 +27,7 @@ const projects: Project[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     githubUrl: "https://example.com",
     tags: ["Go", "Redis", "Docker", "Kubernetes"],
-    imageUrl: "placeholder.jpg",
+    image: placeholderImage,
   },
   {
     id: "md-blog",
@@ -33,7 +36,7 @@ const projects: Project[] = [
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     githubUrl: "https://example.com",
     tags: ["TypeScript", "Next.js", "MDX", "TailwindCSS"],
-    imageUrl: "placeholder.jpg",
+    image: placeholderImage,
   },
 ];
 
