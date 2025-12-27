@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LinkedInComingSoon() {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function LinkedInComingSoon() {
         employment gap on a website that honestly feels pretty hostile to such
         things.
       </p>
-      <a href="/">Back to Home</a>
+      <Link href="/">Back to Home </Link>
     </div>
   );
 }
