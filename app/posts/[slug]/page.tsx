@@ -23,7 +23,7 @@ export default async function PostPage({
           </div>
         </header>
       )}
-      <div>
+      <div className="prose prose-lg">
         <Post />
       </div>
     </article>
