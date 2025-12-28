@@ -1,3 +1,4 @@
+import Comments from "@/components/posts/Comments";
 import { getPostBySlug, getAllPosts } from "@/data/posts/posts";
 
 export default async function PostPage({
@@ -26,6 +27,7 @@ export default async function PostPage({
       <div className="prose prose-lg">
         <Post />
       </div>
+      <Comments />
     </article>
   );
 }

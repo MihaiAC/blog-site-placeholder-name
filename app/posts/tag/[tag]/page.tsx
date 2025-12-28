@@ -1,4 +1,4 @@
-import PostsList from "@/components/PostsList";
+import PostsList from "@/components/posts/CardList";
 import { getPostsByTag, getAllTags } from "@/data/posts/posts";
 import Link from "next/link";
 

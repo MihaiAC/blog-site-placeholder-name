@@ -1,5 +1,5 @@
 import { Post } from "@/data/posts/posts";
-import { PostCard } from "./PostCard";
+import { PostCard } from "./Card";
 
 interface PostsListProps {
   posts: Post[];
