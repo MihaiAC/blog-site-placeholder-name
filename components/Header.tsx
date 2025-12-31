@@ -10,7 +10,9 @@ export default function Header({ className }: HeaderProps) {
       <nav className="flex justify-between">
         <div>
           <Link href="/">
-            <p>Void Underflow</p>
+            <p className="font-logo text-tertiary text-2xl font-bold">
+              VOIDUNDERFLOW
+            </p>
           </Link>
         </div>
         <ul>

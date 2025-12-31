@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
+@theme inline {
   --color-background: #000000;
   --color-foreground: #f2ecca;
   --color-primary: #825593;
@@ -9,4 +9,7 @@
   --color-tertiary: #dfff00;
   --color-neutral: #45547f;
   --color-error: #ef5457;
+
+  --font-base: var(--font-space-mono);
+  --font-logo: var(--font-rubik-lines);
 }

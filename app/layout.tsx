@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
+import { Audiowide, Rubik_Lines } from "next/font/google";
 import "./globals.css";
 import "highlight.js/styles/tokyo-night-dark.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
+// Fonts
+const rubikPixelsFont = Rubik_Lines({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-rubik-lines",
+});
+
+const audiowideFont = Audiowide({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-audiowide",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,13 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${audiowideFont.variable} ${rubikPixelsFont.variable}`}
+    >
       <body
-        className={` antialiased min-h-screen flex flex-col mx-auto w-1/2 bg-background text-foreground`}
+        className={`bg-background text-foreground font-base mx-auto flex min-h-screen w-1/2 flex-col antialiased`}
       >
         <Header className="my-8" />
         <main className="flex-1">{children}</main>
-        <Footer className="flex justify-center items-center h-24" />
+        <Footer className="flex h-24 items-center justify-center" />
       </body>
     </html>
   );
