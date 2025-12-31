@@ -1,10 +1,10 @@
 import PostsList from "@/components/posts/CardList";
-import { getAllPosts, getAllTags } from "@/data/posts/posts";
+import { getAllPosts, getActivePostTags } from "@/data/posts/posts";
 import Link from "next/link";
 
 export default function PostsPage() {
   const posts = getAllPosts();
-  const tags = getAllTags();
+  const tags = getActivePostTags();
 
   return (
     <div>

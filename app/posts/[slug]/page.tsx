@@ -1,5 +1,6 @@
 import Comments from "@/components/posts/Comments";
 import { getPostBySlug, getAllPosts } from "@/data/posts/posts";
+import { notFound } from "next/navigation";
 
 export default async function PostPage({
   params,
@@ -8,22 +9,25 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
   const { default: Post } = await import(`@/data/posts/${slug}/index.mdx`);
-  const posts = getPostBySlug(slug);
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return notFound();
+  }
 
   return (
     <article>
-      {posts && (
-        <header>
-          <h1>{posts.title}</h1>
-          <p>{posts.description}</p>
-          <time dateTime={posts.date}>{posts.date}</time>
-          <div>
-            {posts.tags.map((tag) => (
-              <span key={tag}>{tag}</span>
-            ))}
-          </div>
-        </header>
-      )}
+      <header>
+        <h1>{post.title}</h1>
+        <p>{post.description}</p>
+        <time dateTime={post.date}>{post.date}</time>
+        <div>
+          {post.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      </header>
+
       <div className="prose prose-lg">
         <Post />
       </div>

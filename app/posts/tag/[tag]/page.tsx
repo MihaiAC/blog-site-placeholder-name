@@ -1,6 +1,11 @@
 import PostsList from "@/components/posts/CardList";
-import { getPostsByTag, getAllTags } from "@/data/posts/posts";
+import {
+  getPostsByTag,
+  getActivePostTags,
+  isActivePostTag,
+} from "@/data/posts/posts";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function TagPage({
   params,
@@ -8,6 +13,11 @@ export default async function TagPage({
   params: Promise<{ tag: string }>;
 }) {
   const { tag } = await params;
+
+  if (!isActivePostTag(tag)) {
+    notFound();
+  }
+
   const posts = getPostsByTag(tag);
 
   return (
@@ -27,7 +37,7 @@ export default async function TagPage({
 }
 
 export function generateStaticParams() {
-  return getAllTags().map((tag) => ({
+  return getActivePostTags().map((tag) => ({
     tag: tag,
   }));
 }
