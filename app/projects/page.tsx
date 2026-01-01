@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import ProjectTagBadge from "@/components/ProjectTagBadge";
 import { getAllProjects, getAllProjectTags } from "@/data/projects/projects";
 
 export default function ProjectsPage() {
@@ -17,7 +18,9 @@ export default function ProjectsPage() {
         <h2>Consectetur Adipiscing</h2>
         <div>
           {tags.map((tag) => (
-            <button key={tag}>{tag}</button>
+            <button key={tag}>
+              <ProjectTagBadge tag={tag} />
+            </button>
           ))}
         </div>
       </section>

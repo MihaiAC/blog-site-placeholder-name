@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Project } from "@/data/projects/projects";
+import ProjectTagBadge from "./ProjectTagBadge";
 
 interface ProjectCardProps {
   project: Project;
@@ -14,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <p>{project.description}</p>
       <div>
         {project.tags.map((tag) => (
-          <span key={tag}>{tag}</span>
+          <ProjectTagBadge key={tag} tag={tag} />
         ))}
       </div>
       <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
