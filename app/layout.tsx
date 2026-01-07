@@ -4,6 +4,7 @@ import "./globals.css";
 import "highlight.js/styles/tokyo-night-dark.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { ThemeProvider } from "next-themes";
 
 // Fonts
 const rubikPixelsFont = Rubik_Lines({
@@ -30,6 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
       className={`${audiowideFont.variable} ${rubikPixelsFont.variable}`}
     >
@@ -37,9 +39,16 @@ export default function RootLayout({
         className={`bg-background text-foreground font-base mx-auto flex
           min-h-screen w-1/2 flex-col antialiased`}
       >
-        <Header className="my-8" />
-        <main className="flex-1">{children}</main>
-        <Footer className="flex h-24 items-center justify-center" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header className="my-8" />
+          <main className="flex-1">{children}</main>
+          <Footer className="flex h-24 items-center justify-center" />
+        </ThemeProvider>
       </body>
     </html>
   );

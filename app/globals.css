@@ -1,15 +1,28 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: #000000;
-  --color-foreground: #f2ecca;
-  --color-primary: #825593;
-  --color-secondary: #f07e00;
-  --color-tertiary: #dfff00;
-  --color-neutral: #45547f;
+@theme {
+  --color-background: #f2ecca;
+  --color-foreground: #000000;
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-tertiary: #000000;
+  --color-neutral: #000000;
   --color-error: #ef5457;
 
   --font-base: var(--font-space-mono);
   --font-logo: var(--font-rubik-lines);
+}
+
+@layer theme {
+  .dark {
+    --color-background: #000000;
+    --color-foreground: #f2ecca;
+    --color-primary: #825593;
+    --color-secondary: #f07e00;
+    --color-tertiary: #dfff00;
+    --color-neutral: #45547f;
+    --color-error: #ef5457;
+  }
 }
