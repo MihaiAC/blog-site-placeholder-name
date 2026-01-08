@@ -26,3 +26,27 @@
     --color-error: #ef5457;
   }
 }
+
+@layer components {
+  .nav-link-primary {
+    @apply border-primary hover:bg-primary;
+  }
+
+  .nav-link-secondary {
+    @apply border-secondary hover:bg-secondary;
+  }
+
+  .nav-link-tertiary {
+    @apply border-tertiary hover:bg-tertiary;
+  }
+
+  .nav-link-neutral {
+    @apply border-neutral hover:bg-neutral;
+  }
+}
+
+@layer utilities {
+  .toggle-icon {
+    @apply text-foreground;
+  }
+}
