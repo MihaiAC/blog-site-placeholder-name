@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import NavLink from "./NavLink";
 
 interface HeaderProps {
   className: string;
@@ -17,18 +18,26 @@ export default function Header({ className }: HeaderProps) {
           </Link>
         </div>
         <div>
-          <ul>
+          <ul className="flex gap-8">
             <li>
-              <Link href="/">Home</Link>
+              <NavLink href="/" color="primary">
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link href="/posts">Posts</Link>
+              <NavLink href="/posts" color="secondary">
+                Posts
+              </NavLink>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <NavLink href="/projects" color="tertiary">
+                Projects
+              </NavLink>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <NavLink href="/about" color="neutral">
+                About
+              </NavLink>
             </li>
           </ul>
           <ThemeToggle />
