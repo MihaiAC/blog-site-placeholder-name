@@ -12,9 +12,13 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
-        <Icon icon="ph:sun-bold" width="24" height="24" />
+        <span className="toggle-icon inline-flex">
+          <Icon icon="ph:sun-bold" width="20" height="20" />
+        </span>
       ) : (
-        <Icon icon="ph:moon-bold" width="24" height="24" />
+        <span className="toggle-icon inline-flex">
+          <Icon icon="ph:moon-bold" width="20" height="20" />
+        </span>
       )}
     </button>
   );

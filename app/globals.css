@@ -47,6 +47,6 @@
 
 @layer utilities {
   .toggle-icon {
-    @apply text-foreground;
+    @apply text-foreground border-background hover:border-foreground rounded-full border-2 p-1;
   }
 }
