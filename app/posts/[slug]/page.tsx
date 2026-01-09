@@ -1,6 +1,26 @@
 import Comments from "@/components/posts/Comments";
 import { getPostBySlug, getAllPosts } from "@/data/posts/posts";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.title,
+  };
+}
 
 export default async function PostPage({
   params,

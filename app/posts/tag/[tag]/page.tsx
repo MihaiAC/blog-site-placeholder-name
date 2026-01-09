@@ -6,6 +6,19 @@ import {
 } from "@/data/posts/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ tag: string }>;
+}): Promise<Metadata> {
+  const { tag } = await params;
+
+  return {
+    title: `Posts: ${tag}`,
+  };
+}
 
 export default async function TagPage({
   params,

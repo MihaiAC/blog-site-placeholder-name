@@ -1,6 +1,11 @@
 import ProjectCard from "@/components/ProjectCard";
 import ProjectTagBadge from "@/components/ProjectTagBadge";
 import { getAllProjects, getAllProjectTags } from "@/data/projects/projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default function ProjectsPage() {
   const projects = getAllProjects();

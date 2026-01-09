@@ -1,6 +1,11 @@
 import PostsList from "@/components/posts/CardList";
 import { getAllPosts, getActivePostTags } from "@/data/posts/posts";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Posts",
+};
 
 export default function PostsPage() {
   const posts = getAllPosts();
