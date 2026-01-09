@@ -35,19 +35,21 @@ export default function RootLayout({
       lang="en"
       className={`${audiowideFont.variable} ${rubikPixelsFont.variable}`}
     >
-      <body
-        className={`bg-background text-foreground font-base mx-auto flex
-          min-h-screen w-1/2 flex-col antialiased`}
-      >
+      <body className="bg-background text-foreground font-base antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <Header className="my-8" />
-          <main className="flex-1">{children}</main>
-          <Footer className="flex h-24 items-center justify-center" />
+          <div
+            className="mx-auto flex min-h-screen w-full max-w-4xl flex-col px-6
+              md:px-12"
+          >
+            <Header className="my-8" />
+            <main className="flex-1">{children}</main>
+            <Footer className="flex h-24 items-center justify-center" />
+          </div>
         </ThemeProvider>
       </body>
     </html>
