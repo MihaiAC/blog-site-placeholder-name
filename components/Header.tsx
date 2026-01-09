@@ -9,8 +9,11 @@ interface HeaderProps {
 export default function Header({ className }: HeaderProps) {
   return (
     <header className={className}>
-      <nav className="flex justify-between">
-        <div className="flex flex-col items-center">
+      <nav className="flex flex-col gap-2 lg:flex-row lg:justify-between">
+        <div
+          className="flex flex-col md:flex-row md:gap-8 items-center lg:flex-col
+            lg:gap-0"
+        >
           <Link href="/">
             <p className="font-logo text-tertiary text-2xl font-bold">
               VOIDUNDERFLOW
@@ -18,24 +21,22 @@ export default function Header({ className }: HeaderProps) {
           </Link>
           <ThemeToggle />
         </div>
-        <ul className="flex gap-8">
+        <ul
+          className="flex w-full gap-8 justify-center md:justify-start
+            lg:justify-end"
+        >
           <li>
-            <NavLink href="/" color="primary">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/posts" color="secondary">
+            <NavLink href="/posts" color="primary">
               Posts
             </NavLink>
           </li>
           <li>
-            <NavLink href="/projects" color="tertiary">
+            <NavLink href="/projects" color="secondary">
               Projects
             </NavLink>
           </li>
           <li>
-            <NavLink href="/about" color="neutral">
+            <NavLink href="/about" color="tertiary">
               About
             </NavLink>
           </li>
