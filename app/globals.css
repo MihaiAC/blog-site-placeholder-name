@@ -43,6 +43,22 @@
   .nav-link-neutral {
     @apply border-neutral hover:bg-neutral;
   }
+
+  .nav-border-primary {
+    @apply bg-primary;
+  }
+
+  .nav-border-secondary {
+    @apply bg-secondary;
+  }
+
+  .nav-border-tertiary {
+    @apply bg-tertiary;
+  }
+
+  .nav-border-neutral {
+    @apply bg-neutral;
+  }
 }
 
 @layer utilities {
