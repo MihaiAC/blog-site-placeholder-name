@@ -35,7 +35,10 @@ export default function RootLayout({
       lang="en"
       className={`${audiowideFont.variable} ${rubikPixelsFont.variable}`}
     >
-      <body className="bg-background text-foreground font-base antialiased">
+      <body
+        className="bg-background text-foreground font-base antialiased
+          selection:text-background selection:bg-foreground"
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
