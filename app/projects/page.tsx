@@ -1,5 +1,5 @@
-import ProjectCard from "@/components/ProjectCard";
-import ProjectTagBadge from "@/components/ProjectTagBadge";
+import ProjectCard from "@/components/projects/ProjectCard";
+import ProjectTagBadge from "@/components/projects/ProjectTagBadge";
 import { getAllProjects, getAllProjectTags } from "@/data/projects/projects";
 import { Metadata } from "next";
 
