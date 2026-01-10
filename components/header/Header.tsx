@@ -15,7 +15,7 @@ export default function Header({ className }: HeaderProps) {
           <Link href="/">
             <p
               className="font-logo text-tertiary text-2xl font-bold
-                border-dashed hover:border-solid border border-tertiary px-1"
+                border-dashed hover:border-solid border-2 border-tertiary px-1"
             >
               VOIDUNDERFLOW
             </p>
