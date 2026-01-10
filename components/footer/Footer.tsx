@@ -1,0 +1,78 @@
+import { GithubIcon } from "../icons/GithubIcon";
+import { LeetcodeIcon } from "../icons/LeetcodeIcon";
+import { LinkedinIcon } from "../icons/LinkedinIcon";
+import { MailIcon } from "../icons/MailIcon";
+import { Separator } from "@/components/ui/separator";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import IconTooltip from "./IconTooltip";
+
+interface FooterProps {
+  className: string;
+}
+
+export default function Footer({ className }: FooterProps) {
+  return (
+    <footer className={className}>
+      <div>
+        <TooltipProvider>
+          <ul className="flex items-center gap-4">
+            <li>
+              <IconTooltip label="GitHub">
+                <a
+                  href="https://github.com/VoidUnderflow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GithubIcon size={20} className="text-foreground" />
+                </a>
+              </IconTooltip>
+            </li>
+            <li aria-hidden="true">
+              <Separator
+                orientation="vertical"
+                className="h-4 w-0.5 bg-primary"
+              />
+            </li>
+            <li>
+              <IconTooltip label="LeetCode">
+                <a
+                  href="https://leetcode.com/u/VoidUnderflow/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LeetcodeIcon size={20} className="text-foreground" />
+                </a>
+              </IconTooltip>
+            </li>
+            <li aria-hidden="true">
+              <Separator
+                orientation="vertical"
+                className="h-4 w-0.5 bg-secondary"
+              />
+            </li>
+            <li>
+              <IconTooltip label="LinkedIn">
+                <a href="/linkedin-404">
+                  <LinkedinIcon size={20} className="text-foreground" />
+                </a>
+              </IconTooltip>
+            </li>
+            <li aria-hidden="true">
+              <Separator
+                orientation="vertical"
+                className="h-4 w-0.5 bg-primary"
+              />
+            </li>
+            <li>
+              <IconTooltip label="Email">
+                <a href="mailto:alexmihai.ciobanu@gmail.com">
+                  <MailIcon size={20} className="text-foreground" />
+                </a>
+              </IconTooltip>
+            </li>
+          </ul>
+        </TooltipProvider>
+      </div>
+    </footer>
+  );
+}
