@@ -110,35 +110,19 @@
 
 @layer components {
   .nav-link-primary {
-    @apply border-primary hover:bg-primary;
+    @apply border-b-primary hover:border-primary! active:bg-primary;
   }
 
   .nav-link-secondary {
-    @apply border-secondary hover:bg-secondary;
+    @apply border-b-secondary hover:border-secondary! active:bg-secondary;
   }
 
   .nav-link-tertiary {
-    @apply border-tertiary hover:bg-tertiary;
+    @apply border-b-tertiary hover:border-tertiary! active:bg-tertiary;
   }
 
   .nav-link-neutral {
-    @apply border-neutral hover:bg-neutral;
-  }
-
-  .nav-border-primary {
-    @apply bg-primary;
-  }
-
-  .nav-border-secondary {
-    @apply bg-secondary;
-  }
-
-  .nav-border-tertiary {
-    @apply bg-tertiary;
-  }
-
-  .nav-border-neutral {
-    @apply bg-neutral;
+    @apply border-b-neutral hover:border-neutral! active:bg-neutral;
   }
 }
 

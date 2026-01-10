@@ -8,17 +8,12 @@ interface NavLinkProps {
 
 export default function NavLink({ href, color, children }: NavLinkProps) {
   return (
-    <div className="overflow-hidden rounded-sm relative">
-      <Link
-        href={href}
-        className={`block hover:text-background py-1 px-2 nav-link-${color}`}
-      >
-        {children}
-      </Link>
-      <div
-        className={`absolute bottom-0 left-2 right-2 h-[3px]
-          nav-border-${color}`}
-      />
-    </div>
+    <Link
+      href={href}
+      className={`block py-1 px-2 border border-dashed border-x-transparent
+        border-t-transparent nav-link-${color} active:text-background`}
+    >
+      {children}
+    </Link>
   );
 }
